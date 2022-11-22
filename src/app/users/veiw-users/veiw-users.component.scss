@@ -39,13 +39,15 @@
             border-radius: 10px !important;
             padding: 20px !important;
             // styles for first & last child of each row to assign rounded style
-            ~:first-child {
+            >:first-child {
                 border-top-left-radius: 10px !important;
                 border-bottom-left-radius: 10px !important;
+                // background-color: red;
             }
-            ~:last-child {
+            >:last-child {
                 border-top-right-radius: 10px !important;
                 border-bottom-right-radius: 10px !important;
+                // background-color: red;
             }
             // when hover on each row
             &:hover {
