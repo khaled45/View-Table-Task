@@ -1,0 +1,59 @@
+.all {
+    background-color: #005B97;
+    .container {
+        // footer height
+        height: 166px !important;
+        // Services icons styles
+        .links {
+            width: 100%;
+            flex-direction: row;
+            list-style-type: none;
+            li a {
+                text-decoration: none;
+                color: #fff !important;
+            }
+        }
+        // Social Media icons styles
+        .social {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: end;
+            li {
+                margin: 0px 10px;
+                width: 40px !important;
+                height: 40px !important;
+                background-color: rgba(255, 255, 255, 0.203);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // copyRights styles
+    .copyRights {
+        height: 70px !important;
+        background-color: rgba(0, 0, 0, 0.103);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+}
+
+// Media Query when screen width less than 991 px
+@media (width<991px) {
+    .all div.container {
+        flex-direction: column;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0px !important;
+        padding-top: 15px;
+        margin-left: 0px !important;
+        max-width: 100%;
+    }
+}

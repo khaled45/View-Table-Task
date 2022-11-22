@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #FBFEFF;
+}
+
+*,
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+:root {
+    --main-color: #1C97E9;
+    --gray-color: #666666;
+    --black-color: #333333
+}

@@ -1,0 +1,68 @@
+<div class="container w-75 py-3 px-2 ">
+    <!-- First section contain's create button & users count -->
+    <div class="pre-table d-flex justify-content-between align-items-center  w-100">
+        <p>2,147 <span>Users</span> </p>
+        <button class="addButton" type="button" (click)="AddUser()">Create New User</button>
+    </div>
+    <!-- Users Table -->
+    <div class="table mt-4">
+        <table mat-table [dataSource]="dataSource">
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Expert Name </th>
+                <td mat-cell *matCellDef="let element"><img src="{{userImage}}" alt="{{element.name}}'s Image"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> Email </th>
+                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef> Country </th>
+                <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+            </ng-container>
+
+            <!-- Joined Date Column -->
+            <ng-container matColumnDef="joinedDate">
+                <th mat-header-cell *matHeaderCellDef> Joined Date </th>
+                <td mat-cell *matCellDef="let element"> {{PrintedDate | date:"MMM d, y h:mm a"}} </td>
+            </ng-container>
+
+            <!-- Actions Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="actions">
+                        <a role="button" #tooltip="matTooltip" matTooltip="View" matTooltipPosition="below">
+                            <i class="far fa-eye"></i>
+                        </a>
+
+                        <a role="button" #tooltip="matTooltip" matTooltip="Remove" matTooltipPosition="below">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+
+                        <a role="button" #tooltip="matTooltip" matTooltip="Update" matTooltipPosition="below">
+                            <i class="fas fa-pencil-alt"></i>
+                        </a>
+                    </div>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- Paginations -->
+
+        <!-- I use two ways but <app-paginator> more like than your design -->
+
+        <!-- <mat-paginator #paginator class="demo-paginator" [length]="1000" [pageSize]="10" [showFirstLastButtons]="true" [hidePageSize]="true" [pageIndex]="0" aria-label="Select page">
+        </mat-paginator> -->
+
+        <app-paginator></app-paginator>
+
+    </div>
+</div>

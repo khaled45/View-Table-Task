@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1204.344" height="995.2" viewBox="0 0 1204.344 995.2">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.412" y1="1.026" x2="0.686" y2="0.037" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c9e8fc"/>
+      <stop offset="1" stop-color="#f5fbff"/>
+    </linearGradient>
+  </defs>
+  <path id="header-splash-bg" d="M313.352,433.96C174.729,773.406,522.966,929.279,522.966,929.279h798.54l5.086-750.073S1192.131,545.642,924.144,284.389C704.43,92.044,402.648,215.3,313.352,433.96Z" transform="matrix(-0.966, 0.259, -0.259, -0.966, 1521.904, 824.952)" opacity="0.7" fill="url(#linear-gradient)"/>
+</svg>

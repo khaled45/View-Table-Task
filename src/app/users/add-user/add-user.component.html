@@ -1,0 +1,39 @@
+<!-- dialog close button -->
+<a (click)="onNoClick()" style="text-align: right;float: left;"><i class="fas fa-times" style="margin: 1rem;"></i></a>
+<!-- dialog header -->
+<h2 mat-dialog-title class="text-center border-bottom border-2 pb-3"> Create New User</h2>
+
+<!-- dialog content -->
+<div mat-dialog-content>
+    <form novalidate [formGroup]='UpdateForm' (ngSubmit)='Submit()' class="py-3">
+        <div class="row">
+            <!-- user name -->
+            <mat-form-field appearance="fill" class="col-12">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput formControlName="name" placeholder="Ex:Jone">
+                <mat-error *ngIf="controls().name.hasError('required')">required*</mat-error>
+            </mat-form-field>
+
+            <!-- user Country -->
+            <mat-form-field appearance="fill" class="col-12">
+                <mat-label>Country</mat-label>
+                <input type="text" matInput formControlName="country" placeholder="Ex: England">
+                <mat-error *ngIf="controls().country.hasError('required')">required*</mat-error>
+            </mat-form-field>
+
+            <!-- user Email -->
+            <mat-form-field appearance="fill" class="col-12">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Ex:example@gmail.com">
+                <mat-error *ngIf="controls().email.hasError('required')">required*</mat-error>
+                <mat-error *ngIf="controls().email.hasError('email')">invalid email</mat-error>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+
+<!-- dialog footer contain actions buttons -->
+<div mat-dialog-actions align="start" class="border-top border-2">
+    <button mat-button (click)="onNoClick()">cancel</button>
+    <button mat-button [mat-dialog-close]="UpdateForm.value" (click)="Submit()" [disabled]="!UpdateForm.valid" cdkFocusInitial>Submit</button>
+</div>

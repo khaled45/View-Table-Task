@@ -1,0 +1,126 @@
+// style for first section before table
+.pre-table {
+    // styles for create user button
+    .addButton {
+        box-shadow: 0px 5px 20px#0071bc9d;
+        background-color: #1C97E9;
+        padding: 10px 20px;
+        border-radius: 40px;
+        border: solid var(--main-color);
+        color: #fff;
+    }
+    // styles for text users count
+    p {
+        color: var(--black-color);
+        span {
+            margin: 0px 5px;
+            color: var(--gray-color);
+        }
+    }
+}
+
+// table styles
+.table {
+    table {
+        border-collapse: separate !important;
+        border-spacing: 0 15px !important;
+        width: 100%;
+        background-color: transparent !important;
+        th {
+            border: none !important;
+        }
+        // styles for all <tr> that have attribute [mat-row], mean all row data without headers row
+        tr[mat-row] {
+            background-color: #fff;
+            border: none !important;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 0px 1px 3px #66666679;
+            border-radius: 10px !important;
+            padding: 20px !important;
+            // styles for first & last child of each row to assign rounded style
+            ~:first-child {
+                border-top-left-radius: 10px !important;
+                border-bottom-left-radius: 10px !important;
+            }
+            ~:last-child {
+                border-top-right-radius: 10px !important;
+                border-bottom-right-radius: 10px !important;
+            }
+            // when hover on each row
+            &:hover {
+                background-color: #FBFEFF;
+                transition: .3s ease-out;
+                transform: translateY(-0.25rem);
+                box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+                .actions {
+                    opacity: 1;
+                }
+            }
+        }
+        // icons styles for each row
+        .actions {
+            opacity: 0;
+            a {
+                margin: 0px 10px;
+                width: 40px;
+                padding: 10px;
+                height: 40px;
+                border-radius: 50% !important;
+                border-top-left-radius: 50% !important;
+                border-bottom-left-radius: 50% !important;
+                border-top-right-radius: 50% !important;
+                border-bottom-right-radius: 50% !important;
+                color: var(--gray-color);
+                cursor: pointer !important;
+                &:hover {
+                    cursor: pointer !important;
+                    background-color: #FBFEFF;
+                    color: var(--main-color);
+                    background-color: #1c97e929;
+                }
+            }
+        }
+        td {
+            padding: 15px !important;
+            img {
+                margin: 0px 5px;
+            }
+        }
+    }
+}
+
+mat-paginator {
+    display: flex;
+    justify-content: center;
+}
+
+// change on angular material styles using ::ng-deep
+::ng-deep {
+    .mat-icon-button {
+        background-color: #fff !important;
+        border: solid 1px #D5E0E6 !important;
+        margin: 10px !important;
+        border-radius: 5px !important;
+        &[ng-reflect-disabled=false] {
+            color: var(--main-color) !important;
+        }
+    }
+}
+
+// styles activated for users page when screen width is less than 991px
+@media (width< 991px) {
+    .container {
+        margin: 0px !important;
+        width: 100% !important;
+        column-gap: 0px !important;
+        max-width: 100%;
+    }
+    table {
+        display: inline-block;
+        overflow-x: auto;
+        img {
+            display: none !important;
+        }
+    }
+}

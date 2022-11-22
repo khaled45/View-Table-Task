@@ -1,0 +1,42 @@
+// styles when focus on navbar links
+li a:focus {
+    color: var(--main-color);
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 40%;
+        height: 2px;
+        background-color: var(--main-color);
+        left: 30%;
+        bottom: 0;
+    }
+}
+
+li {
+    position: relative;
+    margin: 10px 20px;
+}
+
+#navbarSupportedContent {
+    justify-content: right !important;
+}
+
+// style for language button
+.langSwitch {
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    &:active {
+        border: 2px solid var(--main-color);
+    }
+}
+
+// styles activated for navbar when screen width less than 991px
+@media (width < 991px) {
+    nav div.container {
+        margin: 0px !important;
+        width: 100% !important;
+        column-gap: 0px !important;
+        max-width: 100%;
+    }
+}
